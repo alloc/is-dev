@@ -1,0 +1,16 @@
+{
+  "name": "@alloc/is-dev",
+  "version": "1.0.0",
+  "main": "isDev.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.4"
+  }
+}
