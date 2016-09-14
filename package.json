@@ -1,0 +1,9 @@
+{
+  "name": "isDev",
+  "version": "1.0.0",
+  "main": "isDev.js",
+  "dependencies": {
+    "exposeToGlobal": "aleclarson/exposeToGlobal#1.0.0",
+    "isNodeJS": "aleclarson/isNodeJS#1.0.0"
+  }
+}
