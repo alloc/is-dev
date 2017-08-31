@@ -1,8 +1,5 @@
 {
   "name": "isDev",
-  "version": "2.0.0",
-  "main": "isDev.js",
-  "dependencies": {
-    "isNodeJS": "aleclarson/isNodeJS#2.0.0"
-  }
+  "version": "3.0.0",
+  "main": "isDev.js"
 }

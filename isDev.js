@@ -1,6 +1,10 @@
 
-var isNodeJS = require('isNodeJS');
-
-module.exports = isNodeJS ?
-  process.env.__DEV__ === "true" :
-  global.__DEV__ === true;
+if (typeof process !== 'undefined') {
+  if (typeof global.__DEV__ !== 'undefined') {
+    module.exports = !!global.__DEV__
+  } else {
+    module.exports = process.env.NODE_ENV !== 'production'
+  }
+} else {
+  module.exports = !!window.__DEV__
+}
