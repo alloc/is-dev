@@ -6,6 +6,7 @@
     "*.js",
     "*.d.ts"
   ],
+  "repository": "alloc/is-dev",
   "scripts": {
     "build": "tsc -p .",
     "prepare": "npm run build"
