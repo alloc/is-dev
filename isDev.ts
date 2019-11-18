@@ -8,3 +8,6 @@ export const isDev =
       ? !!global.__DEV__
       : process.env.NODE_ENV !== 'production'
     : !!window.__DEV__
+
+export const isTest =
+  typeof process !== 'undefined' && process.env.NODE_ENV === 'test'
