@@ -1,18 +1,24 @@
 {
   "name": "@alloc/is-dev",
   "version": "1.2.0",
-  "main": "isDev.js",
+  "main": "dist/isDev.js",
+  "module": "dist/isDev.mjs",
+  "typings": "dist/isDev.d.ts",
   "files": [
-    "*.js",
-    "*.d.ts"
+    "dist",
+    "src"
   ],
   "repository": "alloc/is-dev",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "rollup -c",
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "esbuild": "^0.6.17",
     "prettier": "^1.18.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-dts": "^1.4.10",
+    "rollup-plugin-esbuild": "^2.4.2",
     "typescript": "^3.6.4"
   }
 }
