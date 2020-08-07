@@ -1,6 +1,6 @@
 {
   "name": "@alloc/is-dev",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/isDev.js",
   "module": "dist/isDev.mjs",
   "typings": "dist/isDev.d.ts",
