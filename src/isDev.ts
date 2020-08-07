@@ -2,12 +2,11 @@ declare const process: { env: { NODE_ENV: string } }
 declare const global: { __DEV__: boolean }
 declare const window: typeof global
 
-export const isDev =
-  typeof process !== 'undefined'
-    ? typeof global.__DEV__ !== 'undefined'
-      ? !!global.__DEV__
-      : process.env.NODE_ENV !== 'production'
-    : !!window.__DEV__
+const und = 'undefined'
+const win = typeof window != und ? window : global
 
-export const isTest =
-  typeof process !== 'undefined' && process.env.NODE_ENV === 'test'
+export const isDev =
+  !!win.__DEV__ ||
+  (typeof process != und && process.env.NODE_ENV != 'production')
+
+export const isTest = typeof process != und && process.env.NODE_ENV == 'test'
