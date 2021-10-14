@@ -1,24 +1,9 @@
-import dts from 'rollup-plugin-dts'
-import esbuild from 'rollup-plugin-esbuild'
-
-const name = require('./package.json').main.replace(/\.js$/, '')
-
-const ext = format =>
-  format == 'dts' ? 'd.ts' : format == 'cjs' ? 'js' : 'mjs'
-
-const bundle = format => ({
-  input: 'src/isDev.ts',
+export default {
+  input: ['./esm/isDev.js', './esm/isDev.prod.js'],
   output: {
-    file: `${name}.${ext(format)}`,
-    format: format == 'cjs' ? 'cjs' : 'es',
-    sourcemap: format != 'dts',
+    dir: './cjs',
+    format: 'cjs',
+    sourcemap: true,
   },
-  plugins: format == 'dts' ? [dts()] : [esbuild()],
   external: id => !/^[./]/.test(id),
-})
-
-export default [
-  bundle('es'), //
-  bundle('cjs'),
-  bundle('dts'),
-]
+}

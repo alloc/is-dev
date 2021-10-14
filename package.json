@@ -1,12 +1,23 @@
 {
   "name": "@alloc/is-dev",
   "version": "1.2.2",
-  "main": "dist/isDev.js",
-  "module": "dist/isDev.mjs",
-  "typings": "dist/isDev.d.ts",
+  "main": "cjs/isDev.js",
+  "module": "esm/isDev.js",
+  "typings": "isDev.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "production": "./esm/isDev.prod.js",
+        "default": "./esm/isDev.js"
+      },
+      "production": "./cjs/isDev.prod.js",
+      "default": "./cjs/isDev.js"
+    }
+  },
   "files": [
-    "dist",
-    "src"
+    "esm",
+    "cjs",
+    "isDev.d.ts"
   ],
   "repository": "alloc/is-dev",
   "scripts": {
