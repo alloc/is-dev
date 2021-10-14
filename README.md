@@ -1,8 +1,10 @@
 # @alloc/is-dev
 
-For NodeJS, `global.__DEV__` takes precedence if defined. Otherwise, `process.env.NODE_ENV !== 'production'` is used.
+Check for development and test environments.
 
-For browsers, `window.__DEV__` is used. Defaults to `false` if undefined.
+Compatible with browsers, Node, Vite, and React Native.
+
+Dissolves when bundled.
 
 ```ts
 import { isDev, isTest } from '@alloc/is-dev'
