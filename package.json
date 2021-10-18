@@ -6,6 +6,7 @@
   "typings": "isDev.d.ts",
   "exports": {
     ".": {
+      "types": "./isDev.d.ts",
       "import": {
         "production": "./esm/isDev.prod.js",
         "default": "./esm/isDev.js"
